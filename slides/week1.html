@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Web Dev 3</h1>
+				</section>
+
+				<section>
+					<h2>Me</h2>
+					<p>Dakota Ling</p>
+					<p>I work at <a href="primalscreen.com">Primal Screen</a></p>
+					<p>dakota@primalscreen.com</p>
+				</section>
+
+				<section>
+					<h2>You</h2>
+					<p>...are awesome developers in the making.</p>
+					<p>What do you find interesting about interactive?</p>
+				</section>
+
+				<section>
+					<section>
+						<p><a href="http://ringmaster.creativecircus.edu/class/102">ringmaster.creativecircus.edu/class/102</a></p>
+						<h2>Join Code: opera ferret</h2>
+					</section>
+					
+					<section>
+						<h2>Syllabus</h2>
+						<p>All aboard the sylla bus</p>
+						<a href="https://docs.google.com/document/d/1B7k0XbhVsMaDIMf0MjMAZkKsGpQeX4bXpKb5_F6nFEM/edit?usp=sharing">Google Doc</a>
+					</section>
+
+					<section>
+						<h2>Important points</h2>
+						<ul>
+							<li>Homework is due one minute before class starts.</li>
+							<li>Homework will be submitted through Github.</li>
+							<li>You should have code to look at at the beginning of every class.</li>
+							<li>If I can't see results, I at least want to see progress.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Materials</h2>
+						<p>Class Repo: <a href="https://github.com/CyanLetter/WebDev3_Spring2017">github.com/CyanLetter/WebDev3_Spring2017</a></p>
+						<p>The internet is your book.</p>
+						<p>Today's link is <a href="http://sidebar.io/">sidebar.io</a></p>
+					</section>
+
+					<section>
+						<h2>Slack</h2>
+						<p>@dakota</p>
+						<p>Chat the word 'donut' for help</p>
+						<img src="images/slackdonut.png">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Template</h2>
+						<p>We will be writing code every day. To help get things going faster, let's work from a demo template.</p>
+						<a href="https://github.com/CreativeCircus/circus-starter">github.com/CreativeCircus/circus-starter</a>
+					</section>
+					<section>
+						<h2>Other tools</h2>
+						<p>Github Desktop: <a href="https://desktop.github.com/">desktop.github.com</a></p>
+					</section>
+				</section>
+
+				<section>
+					<h1>Week 1</h1>
+					<h3>Positioning and Transforming</h3>
+				</section>
+
+				
+				<section>
+					<section>
+						<h2>Positioning</h2>
+						<p>
+							Static, Relative, Absolute, Fixed
+						</p>
+					</section>
+					<section>
+						<h2>Static</h2>
+						<p>a.k.a the default</p>
+					</section>
+					<section>
+						<h2>Relative</h2>
+						<p>Gives access to new properties</p>
+						<pre><code>
+.some-div {
+	position: relative;
+	top: 0;
+	right: 10%;
+}
+
+						</code></pre>
+						<p>Percentages are relative to the parent</p>
+					</section>
+					<section>
+						<h2>When to use...</h2>
+						<p>DO NOT use top, right, bottom, and left with relative positioning.</p>
+						<p>DO use margin, padding, floats, flexbox, etc.</p>
+					</section>
+					<section>
+						<h2>Absolute</h2>
+						<p>One of your best friends.</p>
+						<p>Removes element from document flow.</p>
+						<p>Must use top, right, bottom, and left to position.</p>
+						<p>Positioned relative to the last non-static parent.</p>
+					</section>
+					<section>
+						<h2>Absolute and Creating Modules</h2>
+						<p>Position children within a parent container</p>
+						<p>Crop content with overflow: hidden;</p>
+						<p>Layer content with order or z-index</p>
+					</section>
+					<section>
+						<h2>Fixed</h2>
+						<p>Also removes element from document flow</p>
+						<p>Positioned relative to viewport</p>
+						<p>Useful for dialogue windows, navigation, and other persistent elements</p>
+					</section>
+				</section>
+				<!-- transforms -->
+				<section>
+					<section>
+						<h2>2D CSS Transforms</h2>
+						<p>Translate, Scale, Rotate, Skew</p>
+					</section>
+					<section>
+						<h2>Support</h2>
+						<p><a href="http://caniuse.com/#feat=transforms2d">CanIUse?</a></p>
+						<p>Excellent. If you encounter someone for whom 2D transforms do not work, laugh at them.</p>
+					</section>
+					<section>
+						<h2>Translate</h2>
+						<p>Another way to move things about</p>
+						<p>Relative to element's dimensions</p>
+						<p>Fun for slide reveals</p>
+						<pre><code>
+.translate-one {
+	transform: translateX(10px);
+}
+.translate-both {
+	transform: translate(20px, 20px);
+}
+
+					</code></pre>
+					</section>
+					<section>
+						<p>Translate is also good for centering elements with absolute positioning</p>
+						<pre><code>
+.centered {
+	position: absolute;
+	left: 50%; /* relative to parent width */
+	transform: translateX(-50%); /* relative to element width */
+}
+
+					</code></pre>
+					</section>
+					<section>
+						<h2>Multiple Transforms</h2>
+						<p>Can apply multiple transforms at once</p>
+						<p>Still applied as one property</p>
+						<p>Order matters!</p>
+						<pre><code>
+.multi {
+	transform: scale(1.5) translateX(100%);
+}
+
+					</code></pre>
+					</section>
+					<section>
+						<h2>Scale</h2>
+						<p>Exactly what it sounds like</p>
+						<p>Decent for image effects, but watch for pixellation</p>
+						<pre><code>
+.scale-proportionally {
+	transform: scale(1.2);
+}
+.scale-asymetrically {
+	transform: scale(1, 1.2);
+}
+
+					</code></pre>
+					</section>
+					<section>
+						<h2>With great power...</h2>
+						<img src="images/slideshow.gif" title="https://xkcd.com/1264/">
+						<br>
+						<a href="https://xkcd.com/1264/">https://xkcd.com/1264/</a>
+					</section>
+					<section>
+						<h2>Rotate</h2>
+						<p>Measured in degrees</p>
+						<p>Fun for subtle effects on abstract shapes</p>
+						<pre><code>
+.rotate {
+	transform: rotate(90deg);
+}
+
+					</code></pre>
+					</section>
+					<section>
+						<h2>Skew</h2>
+						<p>Also measured in degrees.</p>
+						<p>Takes two parameters.</p>
+						<pre><code>
+.skew {
+	transform: skew(10deg);
+}
+.skew-both {
+	transform: skew(10deg, 10deg);
+}
+
+					</code></pre>
+					<p>Can also be used for <a href="http://www.durimel.io/works/melanie-f">sweet scroll effects</a> and <a href="http://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-transforms/">crazy menus.</a></p>
+					</section>
+
+					<section>
+						<h2>The future of multiple transforms:</h2>
+						<p>Individual properties are <a href="https://twitter.com/simevidas/status/627956718098485248">coming to Chrome</a> maybe.</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Let's talk homework</h2>
+					<p>
+						Also, next class we are learning Sass. Get hyped!
+					</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
