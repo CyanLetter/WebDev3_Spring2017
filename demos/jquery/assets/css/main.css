@@ -1,0 +1,149 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 1. Main Layout ================================= */
+* {
+  box-sizing: border-box; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */ }
+
+html, body {
+  height: 100%;
+  background: black;
+  color: white;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1em;
+  overflow: hidden; }
+  html.snow, body.snow {
+    color: black; }
+
+h1 {
+  font-size: 30vw;
+  font-weight: 300; }
+
+h2 {
+  font-size: 12vw;
+  font-weight: 200; }
+
+h3 {
+  font-size: 7vw;
+  font-weight: 200;
+  margin: 5px; }
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: lighter; }
+
+.hidden {
+  opacity: 0;
+  z-index: 0; }
+
+.temperature.high:before {
+  content: 'High: '; }
+
+.temperature.low:before {
+  content: 'Low: '; }
+
+.temperature:after {
+  content: '\00B0';
+  font-size: 0.8em;
+  vertical-align: top;
+  position: absolute; }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center; }
+  #background #background-images div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: 0.3s; }
+  #background #background-images .sunny {
+    background-image: url(../img/sun.jpg); }
+    .sunny #background #background-images .sunny {
+      opacity: 1; }
+  #background #background-images .overcast {
+    background-image: url(../img/mountain.jpg); }
+    .overcast #background #background-images .overcast {
+      opacity: 1; }
+  #background #background-images .rainy {
+    background-image: url(../img/rain.jpg); }
+    .rainy #background #background-images .rainy {
+      opacity: 1; }
+  #background #background-images .snow {
+    background-image: url(../img/snow.jpg); }
+    .snow #background #background-images .snow {
+      opacity: 1; }
+  #background .main-weather-info {
+    position: absolute;
+    margin-top: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px); }
+    #background .main-weather-info.show {
+      opacity: 1;
+      transform: translateY(0); }
+    @media screen and (min-width: 480px) {
+      #background .main-weather-info {
+        margin-top: 5vh; }
+        #background .main-weather-info h1 {
+          font-size: 15vh; }
+        #background .main-weather-info h2 {
+          font-size: 5vh; }
+        #background .main-weather-info h3 {
+          font-size: 3vh;
+          margin-top: 1.5vh; } }
+
+#five-day-forecast {
+  position: absolute;
+  bottom: 0;
+  margin: 0 20px;
+  padding: 20px 0;
+  width: calc(100% - 40px);
+  z-index: 100;
+  transition: 0.5s;
+  border-top: 1px solid white; }
+  #five-day-forecast .forecast-days {
+    height: 75px;
+    display: flex;
+    justify-content: space-between; }
+    #five-day-forecast .forecast-days .day-group {
+      text-align: center;
+      opacity: 0.8; }
+      #five-day-forecast .forecast-days .day-group.show {
+        opacity: 1; }
+
+/*# sourceMappingURL=main.css.map */
