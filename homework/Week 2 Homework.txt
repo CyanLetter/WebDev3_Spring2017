@@ -1,0 +1,19 @@
+The Rivalry Website. 
+
+Choose two people who have an antagonistic relationship, and create a site documenting their rivalry. Or, if conflict is not your thing, pick a pair of people who have a great alliance instead.
+
+This site should only display information for one of these people at a time - you will include a button to seamlessly switch between the two people. Effectively you will create a full page transition, and use jQuery to change text elements, colors, styles, and images. Your site, at minimum, should include the following elements:
+
+- A navigation bar that lets you switch between your two subjects. Think of the slider on the Reverend Danger website.
+
+- A distinct color theme for each person. This means changing out backgrounds and text colors.
+
+- The name of each person
+
+- An image or two relating to each person. This can be a photograph of them, something related to their work, an insulting doodle... Something to help fill the space. Background images also count.
+
+- A short snippet or two of text information that briefly describes their half of the rivalry.
+
+Keep the details pretty minimal beyond that, i.e. no huge walls of text. You can use whatever inspiration you like for the design, and do try to make it look nice. Remember, the purpose here is for you to get comfortable using the basic functions of jQuery, such as adding/removing classes and replacing content. Most of the work will be in setting up your css, the jQuery interactions will mostly just act as a trigger between them. That also means that using jQuery *plugins* is forbidden. That comes in a later class. Patience, grasshopper.
+
+You will build upon this site in future homework assignments, so you can keep the content sparse for now and just focus on getting a solid handle on jQuery. You will have time to make additions later, so leave yourself room to grow.
