@@ -1,0 +1,23 @@
+Take the page you created for last week's homework and convert it to use sass.
+
+Copy the css you have already written into your sass file, if you have not already been working in it. If you don't do this first, your css will get overwritten when gulp processes the sass file. If that does happen though, remember you can use github to revert your files to your last commit.
+
+You should then refactor the html and css you have already written to utilize the features of sass that we discussed in class. Make variables for your color themes, use nesting to better define related sections and components, create an extendable base class for properties you use elsewhere, etc. We will be discussing these next class, so also keep in mind things that you tried tried that ended up not making sense. Learning what doesn't work is just as valuable as learning what does.
+
+Then make the following changes and additions to your site:
+
+Make sure your site is fully responsive, if it isn't already. Add media queries as necessary. Your site should look good at every window size.
+
+Create an extendable UI module of some kind, and extend it with a couple of minor variations. This could be something like a series of 'fun fact' widgets with different icons, a set of buttons for voting, trading cards, really anything that you can define some basic styles on and then modify slightly. Feel free to use jQuery to add functionality to these as well.
+
+By the end, your Sass file should contain examples of the following:
+
+- Nested style rules. No specific number here, just try to nest things in a way that is efficient and makes sense to you. This is one of Sass' handiest features.
+- At least two variables, page colors are a good candidate for this, since you should already be changing your page theme.
+- At least one inline media query. Using a mixin for this also counts.
+- At least one partial Sass file included in your main file.
+- At least one mixin. This can be as simple or complex as you like. While the breakpoint mixin we discussed in class is useful, I encourage you to look online for other sass mixins as well.
+
+We will be looking at your sass files at the beginning of next class, in addition to the site itself. Keep in mind that the main goal of this assignment is to get you comfortable using Sass on a regular basis, so focus your effors on writing effective, reusable styles. I will look at your Sass files in future projects, but this is the best time to ask about best practices and figure out the parts that you like using. There are about a million bad habits you can develop while using sass, so let's try to address them early.
+
+Submit as a link to your github repo.

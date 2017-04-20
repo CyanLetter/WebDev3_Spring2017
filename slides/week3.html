@@ -97,7 +97,7 @@
 					<section>
 						<h2>$</h2>
 						<p>The dollar sign means 'this is a variable'</p>
-						<pre><code>
+						<pre><code class="scss">
 $primary-color: #aa0045;
 
 .main-container {
@@ -107,7 +107,7 @@ $primary-color: #aa0045;
 					</section>
 					<section>
 						<p>Math!</p>
-						<pre><code>
+						<pre><code class="scss">
 $column-1-3: 1 / 3 * 100%;
 $column-1-1: 100%;
 
@@ -119,7 +119,7 @@ $column-1-1: 100%;
 					</section>					
 					<section>
 						<p>More examples</p>
-						<pre><code>
+						<pre><code class="scss">
 
 p {
   width: $column-1-1;
@@ -152,7 +152,7 @@ p {
 					</section>
 
 					<section>
-						<pre><code>
+						<pre><code class="scss">
 /* this */
 .parent {
 
@@ -175,7 +175,7 @@ p {
 					</section>
 
 					<section>
-						<pre><code>
+						<pre><code class="scss">
 /* Applies to parent that also has red class */
 .parent {
 	
@@ -187,7 +187,7 @@ p {
 					</section>
 
 					<section>
-						<pre><code>
+						<pre><code class="scss">
 /* Apply to all direct children */
 .someclass {
   >* {
@@ -242,7 +242,7 @@ p {
 
 					<section>
 						<p>Basic Example</p>
-						<pre><code>
+						<pre><code class="scss">
 .container {
   width: 60%;
   @media (min-width: 200px) and (max-width:600px) {
@@ -255,7 +255,7 @@ p {
 					<section>
 						<p>Combine with variables to make responsive modules.</p>
 						<p>Note that these are mobile-first breakpoints.</p>
-						<pre><code>
+						<pre><code class="scss">
 $tablet-breakpoint: 640px;
 $desktop-breakpoint: 960px;
 
@@ -284,17 +284,23 @@ $desktop-breakpoint: 960px;
 					</section>
 				</section>
 
+				<section>
+					<h2>The Rest</h2>
+					<p>extend, import, and mixins all get more helpful as projects increase in size.</p>
+				</section>
+
 				<!-- @extend -->
 				<section>
 					<section>
 						<h2>@extend</h2>
-						<p>Repeat style rules you've already written</p>
-						<p>Does NOT duplicate your code</p>
+						<p>Repeat styles you've already written.</p>
+						<p>Duplicates class names.</p>
+						<p>Some people <a href="https://www.sitepoint.com/avoid-sass-extend/">don't like them</a></p>
 					</section>
 
 					<section>
 						<p>Make extendable modules</p>
-						<pre><code>
+						<pre><code class="scss">
 .module {
 	height: 120px;
 	background: #333;
@@ -304,6 +310,23 @@ $desktop-breakpoint: 960px;
 	@extend .widget;
 
 	background-image: url('myImage.jpg');
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Make placeholders with %</p>
+						<pre><code class="scss">
+%button {
+	height: 60px;
+	width: 100px;
+	color: white;
+}
+
+.submit {
+	@extend %button;
+
+	background: green;
 }
 						</code></pre>
 					</section>
@@ -337,7 +360,7 @@ $desktop-breakpoint: 960px;
 					<section>
 						<p>If you have two files, main.scss and _part.scss, you can merge them.</p>
 
-						<pre><code>
+						<pre><code class="scss">
 /* inside of main.scss */
 .main-styles {
 	/* Style rules here */
@@ -364,7 +387,7 @@ $desktop-breakpoint: 960px;
 					<section>
 						<h2>@mixin, @include</h2>
 						<p>Code you define once, reuse anywhere.</p>
-						<p>DOES duplicate your code</p>
+						<p>Duplicates style rules.</p>
 						<p>Can execute complex instructions.</p>
 					</section>
 
@@ -377,7 +400,7 @@ $desktop-breakpoint: 960px;
 					<section>
 						<p>Basic use</p>
 
-						<pre><code>
+						<pre><code class="scss">
 @mixin callout-text {
 	font-size: 20px;
 	font-weight: bold;
@@ -393,7 +416,7 @@ $desktop-breakpoint: 960px;
 					<section>
 						<h2>Breakpoints</h2>
 						<p>Even simpler inline breakpoints</p>
-						<pre><code>
+						<pre><code class="scss">
 $tablet-breakpoint: 640px;
 $desktop-breakpoint: 960px;
 
@@ -413,7 +436,7 @@ $desktop-breakpoint: 960px;
 
 					<section>
 						<h2>Usage</h2>
-						<pre><code>
+						<pre><code class="scss">
 .main-column {
   width: 100%;
 
