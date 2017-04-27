@@ -1,0 +1,11 @@
+Finish the websites you have been working on for the past two weeks.
+
+You must add or alter content to demonstrate what we learned about transitions and backgrounds. At minumum:
+
+- Use a background image in a creative way. The simplest routes to go would be using background-position: fixed; or layering multiple background images. Take a shot at using a property you haven't used before. You can create new content or modify some of your existing content for this.
+
+- Use CSS transitions to create an animation sequence that reveals / hides some of your page's content. Similarly to how we built things in class, you should use a class name change to trigger transitions on multiple elements. This can be anything from a nav bar to shapes or images to paragraphs of text. Also note that this means no CSS keyframe animations, and no javascript animation. This is intended to demonstrate that you have a solid control over the transition properties.
+
+Otherwise spend time polishing the site based on the review in class, and adding any additional content or features you want to add. We will be starting a new project next week, which is the jQuery plugins class.
+
+As usual, submit a link to your github repo.
