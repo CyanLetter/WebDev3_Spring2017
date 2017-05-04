@@ -19,6 +19,7 @@ TABLE OF CONTENTS:
 $main-color: #d3d9e2;
 $secondary-color: #747d8c;
 $accent-color: #ce006a;
+$footer-color: #00bb99;
 
 $col-1-3: 1 / 3 * 100%;
 
@@ -235,5 +236,37 @@ nav {
 		&:after {
 			content: "\201D";
 		}
+	}
+}
+
+footer {
+	background-color: $footer-color;
+	padding: 20px;
+}
+
+.author {
+
+	width: 95%;
+	max-width: 580px;
+	margin: 0 auto;
+	text-align: center;
+
+	>* {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.author-image {
+		width: 70px;
+		height: 70px;
+		border-radius: 70px;
+		background-image: url(../img/portrait.jpg);
+		background-color: $footer-color;
+		background-blend-mode: multiply;
+		background-size: cover;
+	}
+
+	p {
+		color: white;
 	}
 }

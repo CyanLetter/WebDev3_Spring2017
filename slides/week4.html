@@ -218,15 +218,16 @@ transition-delay: 1s;
 						<pre><code class="sass">
 #div1 {
 	background-attachment: scroll;
-	/* Default, moves relative to entire document */
+	/* Default, scrolls with the page */
 }
 #div2 {
 	background-attachment: local;
-	/* Relative to its container */
+	/* Scrolls sorta differently. Boring. */
 }
 #div3 {
 	background-attachment: fixed;
 	/* Relative to viewport, like fixed positioning */
+	/* Does not work on mobile!!! */
 }
 						</code></pre>
 					</section>
@@ -260,6 +261,18 @@ transition-delay: 1s;
 		background-image: url('bigger-image.png');
 		filter: blur(0);
 	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>background-blend-mode</h2>
+						<p>Blends layers of background images and color.</p>
+						<p>Like Photoshop blend modes.</p>
+						<pre><code class="sass">
+.layered-image {
+	background-color: red;
+	background-image: url(some-img.jpg);
+	background-blend-mode: multiply;
 }
 						</code></pre>
 					</section>

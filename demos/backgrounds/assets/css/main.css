@@ -177,4 +177,27 @@ nav {
     .preamble blockquote:after {
       content: "\201D"; }
 
+footer {
+  background-color: #00bb99;
+  padding: 20px; }
+
+.author {
+  width: 95%;
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center; }
+  .author > * {
+    display: inline-block;
+    vertical-align: middle; }
+  .author .author-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-image: url(../img/portrait.jpg);
+    background-color: #00bb99;
+    background-blend-mode: multiply;
+    background-size: cover; }
+  .author p {
+    color: white; }
+
 /*# sourceMappingURL=main.css.map */
