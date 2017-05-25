@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="Lecture for Web Dev 3">
+		<meta name="author" content="Dakota Ling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 8</h1>
+					<h3>Typography, etc</h3>
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Typography</h2>
+						<h3>Why You Should Care</h3>
+						<p>The web was built for text</p>
+						<p>It is easy to make web type suck</p>
+						<p>We have the tools to make it not suck</p>
+					</section>
+
+					<section>
+						<h2>Some Research</h2>
+						<p><a href="http://www.smashingmagazine.com/2011/10/07/16-pixels-body-copy-anything-less-costly-mistake/">Font size matters.</a></p>
+						<p><a href="https://www.propublica.org/article/how-typography-can-save-your-life">Typography can save your life.</a></p>
+						<p>The number one complaint about the web is bad typography</p>
+					</section>
+
+				</section>
+
+				<section>
+					
+					<section>
+						<h2>Rem is your Friend</h2>
+						<p>Stands for "root em".</p>
+						<p>Like em, is a way to make sizes dependent on a parent</p>
+						<p>Useful for changing font sizes with a single media query</p>
+					</section>
+
+					<section>
+						<h2>The problem with em</h2>
+						<pre><code>
+html { font-size: 16px }
+
+/* becomes 24px */
+section { font-size: 1.5em }
+
+/* also 24px */
+section > div { font-size: 1em }
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>The solution with REM</h2>
+						<pre><code>
+html { font-size: 16px }
+
+/* becomes 24px */
+section { font-size: 1.5rem }
+
+/* still 16px */
+section > div { font-size: 1rem }
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Media Queries</h2>
+						<p>Change size of text for different devices</p>
+						<p>Screen sizes shrink, but so do viewing distances</p>
+						<pre><code>
+html { font-size: 17px; }
+
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+						</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Important Considerations</h2>
+						<p>And also some basic rules of thumb</p>
+						<p>Type can affect <a href="http://conversionxl.com/the-effects-of-typography-on-user-experience-conversions/">lots of things</a></p>
+					</section>
+
+					<section>
+						<h2>Line Length</h2>
+						<p>There is an optimal line length for reading, ~70 characters or so.</p>
+						<p>Use max-width and media queries to ensure proper line length</p>
+						<p>Example: <a href="http://www.minimallyminimal.com/"> Minimally Minimal</a></p>
+						<pre><code>
+p {
+	max-width: 650px;
+	margin: 0 auto;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Line height</h2>
+						<p>Allows large bodies of text to breathe.</p>
+						<p>Reading speed and comprehension increases with a line height of 1.5x</p>
+						<pre><code>
+p {
+	line-height: 1.3rem;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Font Size</h2>
+						<p>You can't get too big. Seriously.</p>
+						<p>Compare distance you sit from a computer to distance you hold a book.</p>
+						<p><a href="https://medium.com/@elle_mccann/building-community-and-engagement-around-data-2fb7d72b13b4">Medium</a> knows what's up.</p>
+						<p>So does <a href="https://the-pastry-box-project.net/">The Pastry Box Project</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>There's a plugin for that</h2>
+						<p>There are a handful of web typography plugins. Let's try one out.</p>
+						<p><a href="http://freqdec.github.io/slabText/">Slabtext</a>, for headlines.</p>
+					</section>
+
+					<section>
+						<h2>Usage</h2>
+						<p>There is some required <a href="http://freqdec.github.io/slabText/#h8">CSS</a></p>
+						<p>Depends on jQuery</p>
+					</section>
+					<section>
+						<p>Initialization is simple</p>
+						<pre><code>
+// default options
+$("h1").slabText();	
+						</code></pre>
+						<p>Must use window.onload, since document.ready fires before fonts are loaded.</p>
+					</section>
+					<section>
+						<h2>Beware of plugins</h2>
+						<p>Can do nasty things to your text</p>
+						<p>Untouched blocks of text have many advantages</p>
+						<p>Better accessibility, better SEO</p>
+						<p>One of the <a href="http://letteringjs.com/">worse offenders</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Widows and other anomalies</h2>
+						<p>The most persistent complaint I've gotten.</p>
+						<p><a href="http://www.escapistmagazine.com/articles/view/video-games/columns/extra-punctuation/16979-Are-Games-Losing-My-Interest-or-Is-it-Just-Me">Some sites</a> have other weird issues.</p>
+					</section>
+					<section>
+						<h2>Some solutions</h2>
+						<ul>
+							<li>Fixed width columns</li>
+							<li>Ignoring it</li>
+							<li>non-breaking spaces</li>
+						</ul>
+					</section>
+					<section>
+						<h2>A javascript solution</h2>
+						<pre><code>
+function preventWidows(selector) {
+  selector.each(function() {
+    var wordArray = $(this).text().split(" ");
+    if (wordArray.length > 1) {
+      wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+      wordArray.pop();
+      $(this).html(wordArray.join(" "));
+    }
+  });    
+}
+						</code></pre>
+						<p>From <a href="https://github.com/CyanLetter/web-utilities/blob/master/src/text-layout.js">my own utilities script</a></p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Yay typography</h2>
+					</section>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
