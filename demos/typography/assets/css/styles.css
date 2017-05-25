@@ -1,0 +1,153 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../webfonts/icomoon.eot?-p669ir');
+	src:url('../webfonts/icomoon.eot?#iefix-p669ir') format('embedded-opentype'),
+		url('../webfonts/icomoon.ttf?-p669ir') format('truetype'),
+		url('../webfonts/icomoon.woff?-p669ir') format('woff'),
+		url('../webfonts/icomoon.svg?-p669ir#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+	content: "\e900";
+}
+.icon-dice:before {
+	content: "\e915";
+}
+.icon-pacman:before {
+	content: "\e916";
+}
+.icon-spades:before {
+	content: "\e917";
+}
+.icon-ticket:before {
+	content: "\e939";
+}
+.icon-bell:before {
+	content: "\e951";
+}
+.icon-drive:before {
+	content: "\e963";
+}
+.icon-database:before {
+	content: "\e964";
+}
+.icon-user-tie:before {
+	content: "\e976";
+}
+.icon-quotes-left:before {
+	content: "\e977";
+}
+.icon-quotes-right:before {
+	content: "\e978";
+}
+.icon-hour-glass:before {
+	content: "\e979";
+}
+
+/*
+	Notice that the only class I am using is for the slabtext plugin, everything else uses the elements themselves. This sets defaults for your entire page.
+*/
+
+* {
+	font-family: 'Lato', sans-serif;
+	color: #dddddd;
+}
+
+/* Set the default page font size */
+html { 
+	font-size: 16px;
+}
+
+body {
+	background-color: #444f55;
+}
+
+h1, .slabtext {
+	font-family: 'League Gothic', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-shadow: 2px 2px #222233;
+	color: #ffffdd;
+}
+
+article {
+	width: 100%;
+}
+
+h1, section {
+	width: 90%;
+	max-width: 640px;
+	margin: 20px auto;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.2rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+p {
+	font-weight: 300;
+	font-size: 1.2rem;
+	line-height: 1.7rem;
+}
+
+section {
+	border-top: 1px solid #888;
+}
+
+/***********************
+Media Queries
+***********************/
+
+@media (max-width: 640px) {
+	html { font-size: 15px; }
+}
+
+@media (max-width: 400px) {
+	html { font-size: 13px; }
+}
